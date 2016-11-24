@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+<title>test109.php</title>
+</head>
+<body bgcolor="#93d7ff">
+<h1>第3章　フォームの操作</h1>
+<h2>他ページからのデータ受信</h2>
+<hr />
+
+<form method="post" action="test112-02.php">
+名前を入力してさい。<br />
+<input type="text" name="frmName">
+<br /><br />
+
+性別を選択してください。<br />
+<input type="radio" name="frmSeibetu" value="男">男性の方<br />
+<input type="radio" name="frmSeibetu" value="女">女性の方<br />
+<br /><br />
+
+好きな食べ物を選択してください。<br />
+<input type="checkbox" name="frmTabemono[]" value="親子丼">親子丼<br />
+<input type="checkbox" name="frmTabemono[]" value="カレーライス">カレーライス<br />
+<input type="checkbox" name="frmTabemono[]" value="天ぷらうどん">天ぷらうどん<br />
+<br />
+
+住所を選択してください。<br />
+<select name="frmJusyo">
+	<option value="">
+	<option value="神戸市">神戸市
+	<option value="尼崎市">尼崎市
+	<option value="西宮市">西宮市
+	<option value="芦屋市">芦屋市
+	<option value="宝塚市">宝塚市
+	<option value="明石市">明石市
+	<option value="加古川市">加古川市
+	<option value="姫路市">姫路市
+</select>
+<br /><br />
+
+<input type="submit" value="SEND">
+<input type="reset" value="Clear">
+</form>
+
+</body>
+</html>

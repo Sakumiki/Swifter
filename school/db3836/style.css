@@ -1,0 +1,142 @@
+﻿* {
+	font-size: 100%;
+	line-height: 120%;
+	text-decoration: none;
+}
+
+body {
+	//margin: auto;
+	//background: linear-gradient(#c0c0c0, #ffffff);
+	background: #ffffff;
+	margin: 0px;
+	padding: 0px;
+}
+
+header, article, aside, footer, .amenu {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	//border-radius: 5px;
+}
+
+header {
+	//background: linear-gradient(#00afcc, #a1d8e6);
+	color: #ffffff;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 3em;
+}
+
+.navbar {
+	//margin-bottom: 10px;
+	//border-radius: 5px;	
+	text-align: center;
+}
+
+
+.navbar-default h1{
+	display: none;
+}
+
+
+.contener {
+	width: 900px;
+	margin: auto;
+	background-color: #ffffff;
+}
+
+aside {
+	margin-right: 30px;
+	float: left;
+	width: 170px;
+	background-color: #fef6f9;
+	border-radius: 5px;
+}
+
+
+aside .btn-group{
+	margin: 3px 0px 4px 32px;
+}
+
+aside .php {
+	margin: 0px 0px 5px 0px;
+	padding: 5px 5px 5px 5px;
+	font-size: 120%;
+	color: #999999;
+	background: linear-gradient(#fff352, #edde7b);
+	border-radius: 5px;
+}
+
+aside .syo{
+	margin: 0px 0px 5px 0px;
+	padding: 5px 5px 5px 5px;
+	font-size: 120%;
+	color: #999999;
+	border-radius: 5px;
+}
+
+aside  li {
+	list-style: none;
+}
+
+article.phpindex {
+	background-color: #f4f3fb;
+	float: left;
+	width: 700px;
+	padding: 10px 20px 10px 20px;
+}
+
+article.keyaki{
+	width: 900px;
+	background-color: #5fb955;
+	padding: 10px 0px 10px 0px;
+	border-radius: 5px;
+}
+
+article p {
+	font-size: 20px;
+}
+
+article section h1 {
+	margin: 0px 0px 10px 0px;
+	padding: 10px 10px 10px 10px;
+	font-size: 2em;
+	color: #ffffff;
+	background: linear-gradient(#ffffff, #a3d6cc);
+	border-radius: 5px;
+}
+
+iframe.phpindex{
+	display: block;
+	margin: 0px auto;
+	width: 100%;
+	height: 600px;
+	background-color: #ffffff;
+	border: 0px;
+}
+
+iframe.keyaki{
+	display: block;
+	margin: 0px auto;
+	width: 100%;
+	height: 700px;
+	background-color: #ffffff;
+	border: 0px;
+}
+
+iframe.dbframe{
+	display: block;
+	margin: 0px auto;
+	width: 100%;
+	height: 700px;
+	background-color: #ffffff;
+	border: 0px;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	background-color: #f6adc1;
+	color: #ffffff;
+}

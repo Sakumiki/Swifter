@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/Tr/html4/loose.dtd">
+<html>
+<head>
+<title>html4.01</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	margin : auto;
+	width: 800px;
+}
+#divContener{
+	background-color:#ffff00;
+}
+p{
+	font-size: 30px;
+}
+#divHeader{
+	background-color:#0000ff;
+	color:#ffffff;
+	height: 100px;
+}
+#divNavigationLeft{
+	background-color:#ffff00;
+	float: left;
+	height: 100px;
+	width: 150px;
+}
+#divContents{
+	background-color:#888888;
+	float: left;
+	color:#ffffff;
+	width: 500px;
+}
+#divNavigationRight{
+	background-color:#ffff00;
+	float: left;
+	color:#000000;
+	width: 150px;
+}
+#divFooter{
+	background-color:#ff00ff;
+	text-align:center;
+	clear: left;
+	color:#ffffff;
+	height: 100px;
+}
+
+ul,ol {
+	list-style-position: inside;
+}
+
+.divName{
+	text-align: center;
+	background-color: #ff00ff;
+	width: 80%;
+	padding: 8px;
+	border: 5px solid #000000;
+	border-radius: 15px;
+	font-size: 2em;
+	margin: 10px auto;
+}
+.a{
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<div id="divContener">
+
+<!- ******************** ヘッダー ********************* -->
+	<div id="divHeader">
+		<p>aaa<i class="fa fa-smile-o" aria-hidden="true"></i><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
+	</div>
+
+<!- ******************** ナビ左 ********************* -->
+	<div id="divNavigationLeft">
+		<ul>
+			<li>Java</li>
+			<li>C++</li>
+			<li>Swift</li>
+			<li>Node.js</li>
+		</ul>
+	</div>
+
+<!- ******************** コンテンツ ********************* -->
+	<div id="divContents">
+		<script>
+			for(var i = 1;i <= 100;i++){
+				document.write("山下竜生");
+			}
+			document.write("<br />");
+		</script>
+		コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ<br />
+		<div class="divName">山下竜生</div>
+		コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ<br />
+		<div class="divName">山下竜生</div>
+		コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ<br />
+		<div class="divName">山下竜生</div>
+		コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ<br />
+		<div class="divName">山下竜生</div>
+	</div>
+
+<!- ******************** ナビ右 ********************* -->
+	<div id="divNavigationRight">
+		<ol>
+			<li>Lisp</li>
+			<li>Ruby</li>
+			<li>Paython</li>
+		</ol>
+	</div>
+
+<!- ******************** フッター ********************* -->
+	<div id="divFooter">
+		Copy Right aaa Project
+	</div>
+</div>
+</body>
+</html>
