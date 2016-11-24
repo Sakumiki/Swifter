@@ -2,7 +2,7 @@
 require_once __DIR__ . '/func.php';
 require_unlogined_session();
 $conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
-
+$bango = $_SESSION['id'];
 ?>
 <html>
 <head>
@@ -19,7 +19,7 @@ $conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
 	<div class="col-md-6 col-sm-6 point-box">
 		<h3></h3>
 		<p></p>
-		<a href="./q1" class="btn btn-success btn-lg">質問</a>
+		<a href="./q1.php" class="btn btn-success btn-lg">質問</a>
 		<br /><br /><br /><br />
 	</div>
 	<div class="col-md-6 col-sm-6 point-box">
@@ -29,24 +29,6 @@ $conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
 	</div>
 
 </div>
-
-
-<?php
-//print("半角英数字で入力してください。");
-
-?>
-<!--------------------------------------------------------------------
-							Form
---------------------------------------------------------------------->
-<form method="post" action="login.php">
-
-
-出席番号 : 
-<input type="text" name="frmName" required>
-<br /><br />
-<input type="submit" value="SEND">
-<input type="reset" value="Clear">
-</form>
 
 
 <!--------------------------------------------------------------------

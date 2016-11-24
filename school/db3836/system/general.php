@@ -7,16 +7,7 @@ $conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
 <html>
 <head>
 <title>test201.php</title>
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" type="text/css" href="./assets/style.css">
 
 </head>
 <body>
@@ -25,44 +16,55 @@ $conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
 <hr />
 <form method="post" action="general.php">
 
-
 <!--------------------------------------------------------------------
 							Form
 --------------------------------------------------------------------->
+<table class="general">
+<tr><th>基本情報</th></tr>
 
 
-性別 : 
-<select name="frmGender">
-	<option value="男">男性
-	<option value="女">女性
-</select>
-<br /><br />
-血液型 : 
-<select name="frmBlood">
+<tr>
+<th class="hgeneral">性別</th> 
+<td>
+<input type="radio" id="male" name="frmGender" value="男">
+	<label for="male">男性</label>
+</td>
+<td>
+<input type="radio" id="female" name="frmGender" value="女">
+	<label for="female">女性</label><br>
+<input type="radio" name="frmGender" value="男" checked="checked" style="display:none;" />
+</td>
+</tr>
+<tr>
+<th class="hgeneral">血液型</th>
+<td><select name="frmBlood">
+	<option value="">--
 	<option value="A">A型
 	<option value="B">B型
 	<option value="O">O型
 	<option value="AB">AB型
 </select>
-<br /><br />
-誕生日
-<select name="frmMonth">
-	<option value="--">
+</td>
+</tr>
+<tr>
+<th class="hgeneral">誕生日</th>
+<td><select name="frmMonth">
+	<option value="">--
 <?php
 for($i=1;$i<=12;$i++){
 	print("<option value=".$i.">".$i);
 }
-print("</select>月");
+print("</select>月</td>");
 
 
 print("<select name='frmDay'>");
-
+print("<option value=''>--");
 for($j=1;$j<=31;$j++){
 	print("<option value=".$j.">".$j);
 }
-?></select>日
-
-<br /><br />
+?></select>日<td></tr>
+</table>
+<br />
 
 <input type="submit" value="SEND">
 <input type="reset" value="Clear">
@@ -167,13 +169,13 @@ function fncMseiki($funNum){
 }
 
 
-if((isset($_POST["frmGender"]) == false && isset($_POST["frmBlood"]) == false && isset($_POST["frmMonth"]) == false && isset($_POST["frmDay"]) == false)){
+if(isset($_POST["frmMonth"]) == false || isset($_POST["frmDay"]) == false || isset($_POST["frmBlood"]) == false){
 
 	print("何も入力されていません。");
 
 }else{
 
-	if($_POST["frmGender"] == null && $_POST["frmBlood"] == null && $_POST["frmMonth"] == null && $_POST["frmDay"] == null){
+	if(!$_POST["frmMonth"] || !$_POST["frmDay"] || !$_POST["frmBlood"]){
 		print("何も入力されていません。");
 	}else{
 
@@ -233,6 +235,8 @@ if((isset($_POST["frmGender"]) == false && isset($_POST["frmBlood"]) == false &&
 			print($selMon."/");
 
 		}
+
+
 		if(isset($_POST["frmDay"])|| $_POST["frmDay"]){
 			$mon = fncMseiki($selMon);
 			$selDay = $_POST["frmDay"];
@@ -244,10 +248,12 @@ if((isset($_POST["frmGender"]) == false && isset($_POST["frmBlood"]) == false &&
 			$seiza = fncSeiza($selMon,$selDay);
 			print($seiza);
 		}
-		$selBir = $selMon.$selDay;
+		
+		if($selDay < 10)	$selDay = "0" . $selDay;
 
+		$selBir = $selMon.$selDay;
 		$result = pg_query("select * from tbl_data where bango ='".$bango."'");
-		if(pg_numRows($result) !=0)			fncUp($bango,$selGen,$selBld,$selBir,$seiza);
+		if(pg_numRows($result) != 0)		fncUp($bango,$selGen,$selBld,$selBir,$seiza);
 		else if(pg_numRows($result) == 0)	fncIn($bango,$selGen,$selBld,$selBir,$seiza);
 
 	}
